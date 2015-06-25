@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 狀態：state_pressed、state_focused、state_hovered、state_selected、state_enabled、state_activated、state_window_focused、state_checkable、state_checked -->
+    <!-- Android會根據item的state一個一個往下找，因此<item>的順序非常重要。 -->
+    <item android:state_pressed="true"
+          android:drawable="@drawable/android_arc_welder" >	<!-- 按下 -->
+        <shape>
+            <gradient
+                android:startColor="#ffa618"
+                android:centerColor="#ff8000"
+                android:endColor="#ffa68040"
+                android:angle="270" />	<!-- gradient為漸層色，有三種 type：linear、radial(放射狀)、sweep -->
+                						<!-- angle=0時，起始色在左，終止色在右， angle=90，起始色在下，終止色在上， angle=180，起始色在右，終止色在左， angle=270，起始色在上，終止色在下 -->
+        </shape>
+    </item> 
+    <item android:state_selected="true" > 	<!-- 被選取時-->
+        <shape>
+            <solid
+                android:color="#dedfde" />
+            <stroke
+                android:width="2dp"
+                android:color="#2f6699" />	<!-- stroke 為框線厚度 -->
+            <corners
+                android:radius="2dp" />	    <!-- 指四個角 -->
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />    <!-- padding 為內部文字距上、下、左、右的空白。 -->
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid
+    			android:color="#dedfde" />  <!-- normal -->
+        </shape>
+    </item>
+</selector> 
+
